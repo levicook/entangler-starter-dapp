@@ -2,6 +2,9 @@
   "name": "entangler-starter-dapp",
   "private": true,
   "scripts": {
+    "create-entangled-pair": "ts-node --project cli/tsconfig.json cli/main.ts create-entangled-pair",
+    "update-entangled-pair": "ts-node --project cli/tsconfig.json cli/main.ts update-entangled-pair",
+    "swap": "ts-node --project cli/tsconfig.json cli/main.ts swap",
     "show-idl": "ts-node --project cli/tsconfig.json cli/main.ts show-idl",
     "dev": "next dev",
     "build": "next build",

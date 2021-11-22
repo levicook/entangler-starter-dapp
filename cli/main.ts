@@ -32,6 +32,21 @@ async function connect() {
     }
 }
 
+async function createEntangledPair() {
+    console.log('TODO: createEntangledPair')
+    process.exit(0)
+}
+
+async function updateEntangledPair() {
+    console.log('TODO: updateEntangledPair')
+    process.exit(0)
+}
+
+async function swap() {
+    console.log('TODO: swap')
+    process.exit(0)
+}
+
 async function showIDL() {
     const { idl } = await connect()
     console.log(JSON.stringify(idl, null, '  '))
@@ -43,6 +58,21 @@ cli
     .requiredOption('-c, --commitment [string]', 'commitment', 'confirmed')
     .requiredOption('-r, --rpc-host [string]', 'rpc host', DEFAULT_RPC_HOST)
     .requiredOption('-p, --program-id [string]', 'program id', DEFAULT_PROGRAM_ID)
+
+cli
+    .command('create-entangled-pair')
+    .description('create entangled pair')
+    .action(createEntangledPair);
+
+cli
+    .command('update-entangled-pair')
+    .description('update entangled pair')
+    .action(updateEntangledPair);
+
+cli
+    .command('swap')
+    .description('swap')
+    .action(swap);
 
 cli
     .command('show-idl')
